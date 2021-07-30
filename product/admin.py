@@ -1,8 +1,15 @@
 from django.contrib import admin
-from .models import *
+from .models import Product, ProductImage, Category
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('category', 'created', 'modified')
+    search_fields = ('category',)
+
 
 class ProductImageInline(admin.TabularInline):
-    models = ProductImage
+    model = ProductImage
     extra = 3
 
 
