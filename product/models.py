@@ -7,7 +7,7 @@ class Category(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_plural_name = "Categories"
+        verbose_name_plural  = "Categories"
         ordering = ['-created']
 
     def __str__(self):
