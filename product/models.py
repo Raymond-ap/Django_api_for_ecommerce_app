@@ -13,3 +13,5 @@ class Category(models.Model):
         return self.category
 
 
+class Product(models.Model):
+    pass
