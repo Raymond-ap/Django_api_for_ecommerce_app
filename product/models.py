@@ -23,6 +23,7 @@ class Product(models.Model):
     price = models.FloatField()
     published = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
     slug = models.SlugField(blank=True, null=True) 
 
      # Generate random slugs
